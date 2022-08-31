@@ -1,20 +1,19 @@
-
 * {
-     margin: 0;
- }
+    margin: 0;
+}
 
- html,
- body {
+html,
+body {
     height: 100%;
     font-family: 'DM Sans', sans-serif;
- }
+}
 
- body {
+body {
     grid-template-areas: "nav"
-    "header"
-    "main"
-    "article"
-    "footer";
+        "header"
+        "main"
+        "article"
+        "footer";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr 9fr 5fr 7fr;
     gap: 0px;
@@ -22,42 +21,42 @@
     max-width: 100vw;
     display: grid;
     font-family: 'DM Sans', sans-serif;
- }
+}
 
- header {
+header {
     grid-area: header;
-    background:rgba(0, 0, 0, 0.3) url(/proyecto/Materiales/manos.jpg);
+    background: rgba(0, 0, 0, 0.3) url(/proyecto/Materiales/manos.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: darken;
- }
- 
+}
 
- nav {
+
+nav {
     grid-area: nav;
     background-color: white;
- }
+}
 
- article {
+article {
     grid-area: article;
     background-color: rgb(201, 201, 201);
- }
+}
 
- main {
+main {
     grid-area: main;
     background-color: rgb(82, 152, 255);
- }
+}
 
- footer {
+footer {
     grid-area: footer;
     background-color: rgb(82, 39, 204);
     color: white;
-    
- }
- 
- @media (min-width:389px) and (max-width:844px) {
 
-     /*TAMAÑNO MINIMO DE PANTALLA 844px */
+}
+
+@media (min-width:389px) and (max-width:844px) {
+
+    /*TAMAÑNO MINIMO DE PANTALLA 844px */
     * {
         font-size: 1.2rem;
     }
@@ -76,22 +75,25 @@
         display: grid;
         font-family: 'DM Sans', sans-serif;
     }
+
     nav {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    
-    }
-    main{
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
 
     }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+
+    }
+
     .topnav {
         background-color: rgb(255, 255, 255);
         /*overflow: hidden;*/
@@ -198,12 +200,12 @@
     }
 
     .img_main {
-        
+
         max-width: 100%;
         max-height: max-content;
     }
 
-    
+
 
     .div_padre {
         background: rgb(244, 244, 244);
@@ -212,14 +214,14 @@
         justify-content: center;
         justify-items: center;
         width: 100%;
-        height:100%;
+        height: 100%;
     }
 
     .btnop {
         display: grid;
-        grid-template-areas: 
-        "icono mas"
-        "texto texto";
+        grid-template-areas:
+            "icono mas"
+            "texto texto";
         /*grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;*/
         border-radius: 7px;
@@ -228,7 +230,7 @@
         margin: 60px 70px;
         height: 175px;
 
-        }
+    }
 
     .img_btn {
         grid-area: icono;
@@ -242,10 +244,10 @@
         grid-area: mas;
         width: 20px;
         height: 20px;
-        margin-left:110px;
+        margin-left: 110px;
         margin-bottom: 10%;
-        }
-    
+    }
+
     .fondo_rojo {
         background: rgb(220, 53, 69)
     }
@@ -262,22 +264,24 @@
         background: rgb(23, 162, 184)
     }
 
-    .p_botones{
+    .p_botones {
         grid-area: texto;
         margin-left: 30px;
-        font-size: 1.2rem;  
-    
+        font-size: 1.2rem;
+
     }
-    .noraya{
+
+    .noraya {
         text-decoration: none;
         color: white;
     }
 
-    .txtfooter{
-        color:white;
+    .txtfooter {
+        color: white;
         margin-top: 150px;
 
     }
+
     .centerimg {
         display: block;
         margin-left: auto;
@@ -285,16 +289,55 @@
         margin-top: 25px;
         width: 50%;
     }
-    .space{
+
+    .space {
         margin: 10px;
     }
 
-    .redes{
+    .redes {
         max-width: 60px;
         max-height: 60px;
     }
 
- }
+}
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
+    background-color: rgb(244, 244, 244);
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+}
+
+form {
+    margin: 0 10% 0 10%;
+    font-size: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+input,
+input::placeholder {
+    font-size: 17px;
+}
+
+textarea,
+textarea::placeholder {
+    font-size: 17px;
+}
+
+input {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+textarea {
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+}
+
 /*Aqui termina el media q*/
 /* Add a black background color to the top navigation */
-
