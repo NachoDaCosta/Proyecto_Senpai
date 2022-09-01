@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Grid css 4</title>
+    <title>Proyecto Senpai</title>
+    <link rel="shortcut icon" href="/proyecto/Materiales/senpai.svg">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="proy.css">
@@ -19,16 +20,18 @@
     <nav>
         <div class="topnav space">
             <a href="#"><img src="/proyecto/Materiales/logo.png" class="img_logo"></a>
-
         </div>
+
         <div class="topnav">
             <a href="#" class="hovernav"><b>Nosotros</b></a>
             <a href="#" class="hovernav"><b>Noticias</b></a>
             <a href="#" class="hovernav"><b>Ayuda</b></a>
         </div>
+
         <div>
             <button class="boton">Ingresar</button>
         </div>
+        
     </nav>
 
     <header>
@@ -42,13 +45,13 @@
 
     <main>
         <div class="maintop"><!--div con texto y eso DIV 1 DEL MAIN--> 
-            <div class="foto1 centerimg"><!--primer imagen (Main)-->
+            <div class="foto1 centerimg centimgmain "><!--primer imagen (Main)-->
                 <img src="/proyecto/Materiales/oficina.png" class="img_main">
             </div>
 
             <div class="texto1">
                 <!--Primer titulo con el texto (Main)-->
-                <h2 class="centrado_h2 h2_main">Soluciones para empresas</h2>
+                <h2 class=" h2_main ">Soluciones para empresas</h2>
                 <div>
                     <p class="white_p">
                         Generamos un medio para que las empresas se involucren en
@@ -63,15 +66,13 @@
                 <img src="/proyecto/Materiales/voluntariado.jpg" class="img_main centerimg">
             </div>
 
-            <div class="texto2 centerimg">
+            <div class="texto2">
                 <!--segundo titulo con texto (Main)-->
                 <h2 class="h2_main">Soluciones para organizaciones</h2>
                 <div>
-                    <p class="white_p">Apoyemos a las organizaciones sociales para que alcancen sus
-                        objetivos. Ponemos a su disposicion una comunida de voluntarios
-                        dispuestos a apoyarlas en sus necesidades.
-                        Equipos de voluntarios por empresas dispuestos a potenciar tu
-                        impacto en la sociedad</p>
+                    <p class="white_p">Apoyemos a las organizaciones sociales para que alcancen sus objetivos.
+                    Ponemos a su disposicion una comunida de voluntariosdispuestos a apoyarlas en sus necesidades.
+                    Equipos de voluntarios por empresas dispuestos a potenciar tuimpacto en la sociedad</p>
                 </div>
             </div>
 
@@ -87,33 +88,34 @@
 
         <!-----------------Botones de donar y eso--------------->
         <div class="div_padre"><!--DIV 2 DEL MAIN-->
+            <div class="oportunidades">
+                <div class="btnop  fondo_rojo">
+                    <!--Boton Rojo-->
+                    <img src="/proyecto/Materiales/icono-mano.png" class="img_btn">
+                    <img src="/proyecto/Materiales/icono-mas.png" class="img_btn_plus">
+                    <p class="p_botones noraya">Ser voluntario </p>
+                </div>
 
-            <div class="btnop  fondo_rojo">
-                <!--Boton Rojo-->
-                <img src="/proyecto/Materiales/icono-mano.png" class="img_btn">
-                <img src="/proyecto/Materiales/icono-mas.png" class="img_btn_plus">
-                <p class="p_botones noraya">Ser voluntario </p>
-            </div>
+                <div class="btnop fondo_amarillo">
+                    <!--Boton Amarillo-->
+                    <img src="/proyecto/Materiales/icono-mano-corazon.png" class="img_btn">
+                    <img src="/proyecto/Materiales/icono-mas.png" class="img_btn_plus">
+                    <p class="p_botones">Donar</p>
+                </div>
 
-            <div class="btnop fondo_amarillo">
-                <!--Boton Amarillo-->
-                <img src="/proyecto/Materiales/icono-mano-corazon.png" class="img_btn">
-                <img src="/proyecto/Materiales/icono-mas.png" class="img_btn_plus">
-                <p class="p_botones">Donar</p>
-            </div>
+                <div class="btnop fondo_verde">
+                    <!--Boton Verde-->
+                    <img src="/proyecto/Materiales/icono-reciclar.png" class="img_btn">
+                    <img src="/proyecto/Materiales/icono-mas.png" class="img_btn_plus">
+                    <p class="p_botones">Reciclar</p>
+                </div>
 
-            <div class="btnop fondo_verde">
-                <!--Boton Verde-->
-                <img src="/proyecto/Materiales/icono-reciclar.png" class="img_btn">
-                <img src="/proyecto/Materiales/icono-mas.png" class="img_btn_plus">
-                <p class="p_botones">Reciclar</p>
-            </div>
-
-            <div class="btnop fondo_celeste">
-                <!--Boton Celeste-->
-                <img src="/proyecto/Materiales/icono-maletin.png" class="img_btn">
-                <img src="/proyecto/Materiales/icono-mas.png" class="img_btn_plus">
-                <p class="p_botones">Llamados laborales</p>
+                <div class="btnop fondo_celeste">
+                    <!--Boton Celeste-->
+                    <img src="/proyecto/Materiales/icono-maletin.png" class="img_btn">
+                    <img src="/proyecto/Materiales/icono-mas.png" class="img_btn_plus">
+                    <p class="p_botones">Llamados laborales</p>
+                </div>
             </div>
         </div>
 
@@ -158,13 +160,13 @@
         <div class="contacto">
             <h2 class="centrado_h2">Contacto</h2>
             <form>
-                <label class="centrado_p_negro" for="name_input">Nombre completo</label>
+                <label class="posizq" for="name_input">Nombre completo</label>
                 <input id="name_input" type="text" placeholder="Ingrese su nombre aqui">
         
-                <label class="centrado_p_negro" for="email_input">E-mail</label>
+                <label class="posizq" for="email_input">E-mail</label>
                 <input id="email_input" type="text" placeholder="ej.: pedrogonzales@gmail.com">
         
-                <label class="centrado_p_negro" for="message_input">Mensaje</label>
+                <label class="posizq" for="message_input">Mensaje</label>
                 <textarea name="message" id="message_input" cols="30" rows="10" placeholder="Ingrese su mensaje"
                     required="required"></textarea>
         
@@ -176,7 +178,7 @@
         <div>
             <div>
                 <!--DIV CON LOGO BLANCO-->
-                <img src="/proyecto/Materiales/logo-blanco.png" class="centerimg">
+                <img src="/proyecto/Materiales/logo-blanco.png" class=" centerimg imgchica">
             </div>
             <br>
             <hr>
@@ -193,10 +195,10 @@
             </div>
             <br>
             <hr>
-            <div class="centerimg"><!--Redes-->
-                <img src="/proyecto/Materiales/facebook-logo.png" class="redes">
-                <img src="/proyecto/Materiales/Instagram-logo.png" class="redes">
-                <img src="/proyecto/Materiales/twitter-logo.png" class="redes">
+            <div class="centerimg redes "><!--Redes-->
+                <img src="/proyecto/Materiales/facebook-logo.png" >
+                <img src="/proyecto/Materiales/Instagram-logo.png" >
+                <img src="/proyecto/Materiales/twitter-logo.png" >
             </div>
             <div>
                 <!--DIV CON FRASE DE COPY-->
