@@ -157,25 +157,49 @@
     </article>
 
     <footer>
-        <div class="contacto">
-            <h2 class="centrado_h2">Contacto</h2>
-            <form>
-                <label class="posizq" for="name_input">Nombre completo</label>
-                <input id="name_input" type="text" placeholder="Ingrese su nombre aqui">
-        
-                <label class="posizq" for="email_input">E-mail</label>
-                <input id="email_input" type="text" placeholder="ej.: pedrogonzales@gmail.com">
-        
-                <label class="posizq" for="message_input">Mensaje</label>
-                <textarea name="message" id="message_input" cols="30" rows="10" placeholder="Ingrese su mensaje"
-                    required="required"></textarea>
-        
-                <button class="boton">
+        <div class="contacto"> <!--primer div para contacto-->
+
+            <div >
+                <img src="/proyecto/Materiales/laptop-escritorio.jpg" class="imgmedia">
+            </div>
+
+            <div class="formularios">
+
+                <div class="marginbottom0"><!--DIV 1 DEL TITULO-->
+                    <h2 class="centrado_h2">Contacto</h2>
+                </div>
+                
+                
+                <div> <!--DIV 2 QUE CONTIENE LOS FORMULARIOS-->
+                    <form >
+                        <div class="formseparados">
+                            <div>
+                                <label class="posizq" for="name_input">Nombre completo</label>
+                                <input id="name_input" type="text" placeholder="Ingrese su nombre aqui">
+                    
+                                <label class="posizq" for="email_input">E-mail</label>
+                                <input id="email_input" type="text" placeholder="ej.: pedrogonzales@gmail.com">
+                            </div>
+                            <div class="martop10">
+                                <label class="posizq" for="message_input">Mensaje</label>
+                                <textarea name="message" id="message_input" cols="30" rows="10" placeholder="Ingrese su mensaje" required="required"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+                    
+
+                <div class="marleft50"> <!--DIV BOTON OK-->
+                    <button class="boton">
                     ENVIAR
-                </button>
-            </form>
+                    </butto>
+                </div>
+                
+            </div>
+            
         </div>
-        <div>
+        <div class="footerbotom">
             <div>
                 <!--DIV CON LOGO BLANCO-->
                 <img src="/proyecto/Materiales/logo-blanco.png" class=" centerimg imgchica">
