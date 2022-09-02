@@ -1066,5 +1066,12 @@ footer {
     .texto1, .texto2{
         margin-top: 0;
     }
+    a{
+        text-decoration: none;
+    }
+    p{
+        text-decoration: none;
+    }
+    
    
 }
