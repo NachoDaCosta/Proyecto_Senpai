@@ -16,7 +16,79 @@
 </head>
 
 <body>
-
+    <div class="modal">
+        <div class="contenidomodal">
+            <div>
+                <img src="/proyecto/Materiales/imagen-modal.JPG" alt="" class="modal_img">
+            </div>
+            
+            <div class="modal_right">
+                <div class="modal_header">
+            
+                    <div>
+                        <img class="img_back" src="/proyecto/Materiales/icono-flecha.png" alt="">
+                    </div>
+            
+                    <div>
+                        <a href="#" class="text_color_grey" id="cerrar_modal">
+                            <p >Volver atras</p>
+                        </a>
+                    </div>
+            
+                    <div>
+                        <a href="#" class="close_button" id="cerrar_modalx">X</a>
+                    </div>
+                </div>
+            
+                <div class="modal_content">
+                    <div>
+                        <p class="content_title">REGISTRAR</p>
+                    </div>
+                    <a href="#" class="registro" id="miempresa">
+                        <div class="img blue_background">
+                            <img src="/proyecto/Materiales/icono-maletin.png" alt="" class="img_registro">
+                        </div>
+            
+                        <div class="title">
+                            <p class="text_color_skyblue">MI EMPRESA</p>
+                        </div>
+            
+                        <div class="text">
+                            <p>Breve explicacion a lo que nos
+                                referimos</p>
+                        </div>
+            
+                        <div class="arrow">
+                            <a href="#"><img src="./FSDB/proyecto/Materiales/icono-flecha.png" alt=""></a>
+                        </div>
+                        
+                    
+                    </a>
+            
+                    <a href="#" class="registro" id="miorg">
+                        <div class="img violet_background">
+                            <img src="/proyecto/Materiales/icono-persona.png" alt="" class="img_registro">
+                        </div>
+            
+                        <div class="title">
+                            <p class="text_color_violet">MI ORGANIZACION</p>
+                        </div>
+            
+                        <div class="text">
+                            <p>Estamos para ayudarlos
+                                a tener exito</p>
+                        </div>
+            
+                        <div class="arrow">
+                            <a href="#">
+                                <img src="./FSDB/proyecto/Materiales/icono-flecha.png" alt="">
+                            </a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <nav>
 
         <div class="topnav space"><!--DIV CON EL LOGO PAR EL NAV-->
@@ -25,13 +97,15 @@
         </div>
 
         <div class="topnav"><!--ENLACES DEL NAV-->
-            <a href="#" class="hovernav"><b>Nosotros</b></a>
-            <a href="#" class="hovernav"><b>Noticias</b></a>
-            <a href="#" class="hovernav"><b>Ayuda</b></a>
+            <a href="#us_section" class="hovernav"><b>Nosotros</b></a>
+            <a href="#news_section" class="hovernav"><b>Noticias</b></a>
+            <a href="#help_section" class="hovernav"><b>Ayuda</b></a>
         </div>
 
-        <div><!--BOTON INGRESAR DEL NAV-->
-            <button class="boton">Ingresar</button>
+        <div class="manoboton" ><!--BOTON INGRESAR DEL NAV-->
+            <button class="boton" id="login">
+                Ingresar
+            </button>
         </div>
 
     </nav>
@@ -44,7 +118,7 @@
         </p>
     </header>
 
-    <main>
+    <main id="us_section">
         <div class="maintop"><!--div con texto y eso DIV 1 DEL MAIN--> 
             <div class="centerimg foto1"><!--primer imagen (Main)-->
                 <img src="Materiales/oficina.png" class="img_main">
@@ -135,7 +209,7 @@
 
     </main>
 
-    <article><!--NOTICIAS-->
+    <article id="news_section"><!--NOTICIAS-->
         <div>
             <h2 class="centrado_h2 h2_main title_news">Noticias</h2>
         </div>
@@ -260,7 +334,7 @@
         </div>
     </article>
 
-    <footer>
+    <footer id="help_section">
         <div class="contacto"> <!--primer div para contacto-->
 
             <div >
@@ -302,47 +376,46 @@
             
         </div>
         
-        <div>
-            <div><!--DIV CON LOGO BLANCO-->
-                <img src="Materiales/logo-blanco.png" class=" centerimg imgchica">
+        <div class="bottomfooter">  <!--Empieza footer footer-->
+            <div id="separador">
             </div>
-
-            <br>
             <hr>
+                
+                <div class="logo"><!--DIV CON LOGO BLANCO-->
+                    <img src="Materiales/logo-blanco.png" class=" centerimg imgchica centradofooter imgfooter">
+                </div>
 
-            <div class="centrado_p"><!-- DIV CON HREFS DEL FOOTER-->
-                <a href="#" class="txtfooter">
-                   <p class="martop"> Nosotros</p>
-                </a>
-                <br>
-                <a href="#" class="txtfooter">
-                    <p class="martop">Noticias</p>
-                </a>
-                <br>
-                <a href="#" class="txtfooter">
-                    <p class="martop">Contacto</p>
-                </a>
-                <br>
-                <a href="#" class="txtfooter">
-                    <p class="martop">Terminos y Condiciones</p>
-                </a>
-            </div>
-
-            <br>
-            <hr>
-
-            <div class="centerimg redes imgchica "><!--Iconos Redes-->
-                <img src="Materiales/facebook-logo.png">
-                <img src="Materiales/Instagram-logo.png" >
-                <img src="Materiales/twitter-logo.png">       
-            </div>
-            <hr class="martop10">
-
-            <div><!--DIV CON FRASE DE COPY-->
+                <div class="centrado_p links "><!-- DIV CON HREFS DEL FOOTER-->
+                    <a href="#us_section" class="txtfooter">
+                    <p class="martop linkstop"> Nosotros</p>
+                    </a>
+                    <br>
+                    <a href="#news_section" class="txtfooter">
+                        <p class="martop">Noticias</p>
+                    </a>
+                    <br>
+                    <a href="#help_section" class="txtfooter">
+                        <p class="martop">Contacto</p>
+                    </a>
+                    <br>
+                    <a href="#" class="txtfooter">
+                        <p class="martop">Terminos y Condiciones</p>
+                    </a>
+                </div>
+                <div class="centerimg redes imgchica centradoredes"> <!--Iconos de redes sociales-->
+                    <img src="Materiales/facebook-logo.png">
+                    <img src="Materiales/Instagram-logo.png">
+                    <img src="Materiales/twitter-logo.png">
+                </div>
+                
+            <div class="copy"><!--DIV CON FRASE DE COPY-->
+                <hr>
                 <p class="centrado_p">© 2022 Nacho & Nico First Web-Site. All rights reserved</p>
             </div>
         </div>
     </footer>
+<script src="/proyecto/proy.js"></script>
 </body>
+
 
 </html>

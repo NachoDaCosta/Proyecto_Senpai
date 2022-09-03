@@ -132,6 +132,27 @@ footer {
             width: 100%;
             border-radius: 10px;
         }
+        .bottomfooter{
+            display: grid;
+            grid-template-areas: 
+            "logo links redes"
+            "copyr copyr copyr";
+            grid-template-rows: 80% 20%;
+            grid-template-columns: 30% 40% 30%;            
+        }
+        .logo{
+            grid-area: logo;
+        }
+        .copy{
+            grid-area: copyr;
+            margin-top: 15px;
+        }
+        .links{
+            grid-area: links;
+        }
+        .linkstop{
+            margin-top: 30px;
+        }
 /*------------PROPIEDADES DEL NAV PC---------------*/
         .topnav {
             background-color: rgb(255, 255, 255);
@@ -163,6 +184,12 @@ footer {
             text-decoration: none;
             font-size: 16px;
             padding: 8px;
+        }
+        .manoboton :hover{
+                color: white;
+                border-radius: 15px;
+                padding: 14px;
+                font-size: 20px;
         }
 
         .espaciadonav {
@@ -610,6 +637,7 @@ footer {
     }
 
     .redes {
+        grid-area: redes;
         display: flex;
         justify-content: center;
         width: 60px;
@@ -636,6 +664,177 @@ footer {
         width: 500px;
         height: 350px;
     }
+    .imgfooter{
+        width: 45%;
+        height: 50px;
+        margin-top: 30px;
+        margin-left: 60%;
+    }
+   
+
+
+/*------------------MODAL-------------------*/
+.contenidomodal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-height: 90%;
+    border-radius: 15px;
+    padding: 3em 2.5em;
+    
+}
+
+.modal{
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+.mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.modal_right {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    height: 700px;
+    width: 600px;
+}
+
+.modalradius{
+    border-radius:15px;
+}
+
+.modal_header {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 10% 20% 70%;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    
+}
+
+.registro {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 30% 40% 10%;
+    grid-template-areas: 
+        "img title"
+        "img text"
+        "img arrow";
+    border-radius: 2px;
+    border-color: black;
+    border-width: 2px;
+    box-shadow: 2px;
+    width: 90%;
+    height: 45%;
+    text-decoration: none;
+}
+
+.img {
+    background-color: lightgray;
+    grid-area: img;
+}
+
+.title {
+    padding-left: 5%;
+    grid-area: title;
+    background-color: white;
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+.text {
+    grid-area: text;
+    color: gray;
+    padding-left: 5%;
+    padding-right: 15%;
+    background-color: white;
+    font-size: 1.5rem;
+}
+
+.text_color_violet {
+    color: rgb(119, 73, 248);
+}
+
+.violet_background {
+    background-color: rgb(119, 73, 248);
+}
+
+.text_color_skyblue {
+    color: rgb(28, 120, 253);
+}
+
+.text_color_grey {
+    color: gray;
+    text-decoration: none;
+}
+
+.blue_background {
+    background-color: rgb(28, 120, 253);
+}
+
+.arrow {
+    grid-area: arrow;
+    padding-left: 90%;
+    background-color: white;
+}
+
+.img_registro {
+    padding-left: 27%;
+    padding-top: 75%;
+    height: 50px;
+    width: 50px;
+}
+
+.modal_img {
+    width: 625px;
+    height: 700px;
+    object-fit: cover;
+    
+}
+
+.content_title {
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+.close_button {
+    font-size: 2.0rem;
+    color: gray;
+    text-decoration: none;
+    margin-left: 87%;
+}
+.close_button:hover{
+    color: red;
+    font-weight: bold;
+}
+
+.img_back {
+    margin-left: 35px;
+}
+
 }
 
 /*--------ARRANCA MEDIA Q DE IPHONE------*/
@@ -1009,6 +1208,7 @@ footer {
         margin-top: 25px;
         width: 50%;
     }
+
 /*-----------PROPIEDADES DEL FOOTER------------------*/
     .redes {
         display: flex;
@@ -1050,4 +1250,179 @@ footer {
         margin-bottom: 50px;
         padding: 0px;
     }
+    .centradofooter{
+        margin-left: 110px;
+        width:50%;
+    }
+    .centradoredes{
+        margin-left: 175px;
+        margin-bottom: 15px;
+    }
+
+/*--------PROPIEDADES DEL MODAL------------*/
+.contenidomodal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-height: 90%;
+    border-radius: 15px;
+    padding: 3em 2.5em;
+
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mostrar {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.modal_right {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    height: 400px;
+    width: 100%;
+    
+}
+
+.modalradius {
+    border-radius: 15px;
+}
+
+.modal_header {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 10% 20% 70%;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+.registro {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 30% 40% 10%;
+    grid-template-areas:
+        "img title"
+        "img text"
+        "img arrow";
+    border-radius: 2px;
+    border-color: black;
+    border-width: 2px;
+    box-shadow: 2px;
+    width: 100%;
+    height: 25%;
+    text-decoration: none;
+}
+
+.img {
+    background-color: lightgray;
+    grid-area: img;
+}
+
+.title {
+    padding-left: 5%;
+    grid-area: title;
+    background-color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.text {
+    grid-area: text;
+    color: gray;
+    padding-left: 5%;
+    padding-right: 15%;
+    background-color: white;
+    font-size: 0.2rem;
+}
+
+.text_color_violet {
+    color: rgb(119, 73, 248);
+}
+
+.violet_background {
+    background-color: rgb(119, 73, 248);
+}
+
+.text_color_skyblue {
+    color: rgb(28, 120, 253);
+}
+
+.text_color_grey p{
+    font-size: 12px;
+    color: gray;
+    text-decoration: none;
+}
+
+.blue_background {
+    background-color: rgb(28, 120, 253);
+}
+
+.arrow {
+    grid-area: arrow;
+    padding-left: 90%;
+    background-color: white;
+}
+
+.img_registro {
+    padding-left: 30%;
+    padding-top: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+/*-----bloqueamos la imagen del modal*/
+.modal_img {
+    display: none;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.content_title {
+    font-size: 1.0rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.close_button {
+    font-size: 1.0rem;
+    color: grey;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 87%;
+}
+
+.img_back {
+    display: none;
+    margin-left: 35px;
+}
 }
