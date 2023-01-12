@@ -2,76 +2,55 @@
     margin: 0;
 }
 
-html,
 body {
-    height: 100%;
-    font-family: 'DM Sans', sans-serif;
-}
-
-body {
-    grid-template-areas: "nav"
-        "header"
-        "main"
-        "article"
-        "footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr 9fr 5fr 7fr;
-    gap: 0px;
-    max-height: 100vh;
-    max-width: 100vw;
     display: grid;
+    grid-template-rows: 2fr 4fr 9fr 5fr 7fr;
+    gap: 0px;
+    height: 100vh;
+    width: 100vw;
     font-family: 'DM Sans', sans-serif;
 }
 
 header {
-    grid-area: header;
     background: rgba(0, 0, 0, 0.5) url(Materiales/manos.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: darken;
 }
 
-
 nav {
-    grid-area: nav;
     background-color: white;
+    height: 100%;
+    width: 100vw;
 }
 
 article {
-    grid-area: article;
-    background-color: rgb(82, 152, 255)
+    background-color: rgb(82, 152, 255);
+    width: 100vw;
     
 }
 
 main {
-    grid-area: main;
     background-color: rgb(82, 152, 255);
+    width: 100vw;
 }
 
 footer {
-    grid-area: footer;
     background-color: rgb(82, 39, 204);
     color: white;
-
+    width: 100vw;
 }
 
 /*---------MEDIA Q DE PC ----------*/
-@media (min-width:1365px) {
+@media (min-width:1080px) {
     * {
         font-size: 1.2rem;
     }
     /*--------ZONAS---------*/
         body {
-            grid-template-areas:
-                "nav"
-                "header"
-                "main"
-                "article"
-                "footer";
-            grid-template-columns: 1fr;
             grid-template-rows: 1fr 5fr 9fr 5fr 7fr;
-            gap: 0px;
-            max-width: 100vw;
+            width: 100vw;
+            height: 100vh;
             display: grid;
             font-family: 'DM Sans', sans-serif;
         }
@@ -79,21 +58,24 @@ footer {
         nav {
             display: grid;
             grid-template-columns: 2fr 5fr 2fr;
-            grid-template-rows: 1fr;
             justify-items:center;
             align-items: center;
+            background-color: white;
+            height: 90px;
         }
         
         header{
+            display: grid;
+            align-items: center;
+            grid-template-rows: 50% 10%;
             height: 60vh;
         }
 
         main {
             display: grid;
-            grid-template-columns: 1fr;
             grid-template-rows: 50% 50%;
             justify-items: center;
-            align-items: center;
+            align-content: center;
         }
 
         article {
@@ -105,25 +87,23 @@ footer {
         }
 
         form {
-            margin: 0 10% 0 10%;
             font-size: 10px;
             justify-items: center;
             align-items: center;
         }
 
-        input,
+        
         input::placeholder {
-            font-size: 17px;
+            font-size: 27px;
         }
 
-        textarea,
+        
         textarea::placeholder {
-            font-size: 17px;
+            font-size: 27px;
         }
 
         input {
             border-radius: 10px;
-            margin-bottom: 10px;
             width: 100%;
         }
 
@@ -145,25 +125,26 @@ footer {
         }
         .copy{
             grid-area: copyr;
-            margin-top: 15px;
         }
         .links{
             grid-area: links;
         }
-        .linkstop{
-            margin-top: 30px;
-        }
+        
 /*------------PROPIEDADES DEL NAV PC---------------*/
-        .topnav {
-            background-color: rgb(255, 255, 255);
+        .about{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap:200px
+            
         }
-
-        .topnav a {
+        .about a {
+            display: grid;
+            align-items: center;
             color: #000000;
             text-align: center;
             text-decoration: none;
-            font-size: 17px;
-            margin-right: 250px;
+            font-size: 55px;
         }
 
         .hovernav :hover {
@@ -172,7 +153,6 @@ footer {
             font-family: sans-serif;
             border-radius: 20px;
             padding: 8px;
-            height: 150px;
         }
 
         .boton {
@@ -203,7 +183,6 @@ footer {
         justify-items: center;
         align-items: center;
         font-size: 1.2rem;
-        margin-top: 10px;
         color: white;
         text-decoration: none;
     }
@@ -214,7 +193,6 @@ footer {
         justify-items: center;
         align-items: center;
         font-size: 2.0rem;
-        margin: 100px;
         color: white;
         text-decoration: none;
     }
@@ -226,7 +204,6 @@ footer {
         align-items: center;
         font-size: 1.5rem;
         color: rgb(0, 0, 0);
-        margin: 5vh 15vh 5vh 15vh ;
     }
 
     .centrado_h1 {
@@ -235,7 +212,6 @@ footer {
         justify-items: center;
         align-items: center;
         font-size: 4.0rem;
-        margin-top: 8vh;
         color: white;
     }
 
@@ -245,8 +221,6 @@ footer {
         justify-items: center;
         align-items: center;
         font-size: 3.0rem;
-        margin-top: 5vh;
-        margin-bottom: 15px;
         color: rgb(20, 20, 20);
     }
 
@@ -257,21 +231,10 @@ footer {
         justify-items: center;
         align-items: center;
         font-size: 3.0rem;
-        margin-bottom: 15px;
         color: white;
     }
 
-    .white_p {
-        color: white;
-        text-align: center;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        font-size: 25px;
-        color: white;
-        margin-right: 50px;
-        margin-left: 50px;
-    }
+    
 
     .noraya {
         text-decoration: none;
@@ -280,67 +243,46 @@ footer {
 /*----------PROPIEDADES DEL MAIN*/
     .maintop {
         display: grid;
-        grid-template-areas:
-            "foto1 texto1"
-            "texto2 foto2";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        justify-items: center;
+        align-items: center;
         height: 100%;
         width: 100%;
     }
 
-    .div_padre {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "op_text op_text op_text op_text"
-            "button_one button_two button_three button_four";
-        background: rgb(244, 244, 244);
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        justify-items: center;
-        gap: 10px;
-        width: 100%;
-        height: 100%;
-    }/*DIVS SEPARADORES*/
 
     .img_logo {
-        width: 15vh;
+        width: 15vw;
         height: 1fr;
     }
 
-    .foto1 {
-        grid-area: foto1;
-
-    }
-
-    .foto2 {
-        grid-area: foto2;
-    }
-
-    .texto1 {
-        grid-area: texto1;
+    .center-text-main{
+        display: grid;
+        justify-content: center;
+        font-size: 20px;
         color: white;
     }
 
-    .texto2 {
-        grid-area: texto2;
+
+
+    .text-main {
+        display: grid;
+        align-items: center;
+        justify-items: center;
         color: white;
+        height: 100%;
     }
 
-    .texto3 {
-        grid-area: texto3;
-        color: white;
-    }
     .img_main {
         width: 600px;
         height: 300px;
-        object-fit: cover;
     }
 
-    .op_text{
-        grid-area: op_text;
-        padding: 5% 10% 5% 10%;
+    .oportunidades{
+        display: grid;
+        align-items: center;
+        justify-content: center;
     }
 
     .button_one{
@@ -361,21 +303,17 @@ footer {
         border-radius: 7px;
         color: white;
         align-items: center;
-        margin: 60px 70px;
         height: 175px;
     }
 
     .btnop {
         display: grid;
-        grid-template-areas:
-            "icono mas"
-            "texto texto";
-        border-radius: 7px;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
         color: white;
         align-items: center;
-        margin: 0px 0px 150px 0px;
         height: 250px;
-        width: 80%;
+        width: 50%;
         border-radius: 30px;
     }
 
@@ -383,46 +321,32 @@ footer {
         grid-area: icono;
         max-width: 100px;
         max-height: 100px;
-        margin-left: 20%;
-        margin-top: 20%;
     }
 
     .img_btn_plus {
         grid-area: mas;
         width: 30px;
         height: 30px;
-        margin-left: 60%;
-        margin-bottom: 10%;
     }
 /*--------------COLORES DE LOS BOTONES-------------*/
     .fondo_rojo {
         background: rgb(220, 53, 69);
-        grid-area: button_one;
-        margin-left: 45%;
     }
 
     .fondo_amarillo {
         background: rgb(255, 156, 7);
-        grid-area: button_two;
-        margin-left: 15%;
     }
 
     .fondo_verde {
         background: rgb(40, 167, 69);
-        grid-area: button_three;
-        margin-right: 15%;
     }
 
     .fondo_celeste {
         background: rgb(23, 162, 184);
-        grid-area: button_four;
-        margin-right: 45%;
     }
 
     .p_botones {
-        grid-area: texto;
-        margin-left: 30px;
-        font-size: 1.8rem
+        font-size: 35px
     }
 /*---------------NOTICIAS-------------*/
     .pnoticias {
@@ -477,8 +401,6 @@ footer {
 
     .title_news {
         grid-area: title_news;
-        margin-left: 20px;
-        margin-right: 20px;
     }
 
     .news_img {
@@ -490,7 +412,6 @@ footer {
     }
 
     .news_text {
-        margin: 30px 20px 30px 20px;
         font-size: 1.0rem;
     }
 
@@ -499,15 +420,11 @@ footer {
         font-weight: bold;
     }
 
-    .news_description {
-        margin-top: 10%;
-    }
+    
 
     .see_more {
         display: flex;
         justify-content: flex-end;
-        margin-top: 10px;
-        margin-right: 20px;
     }
 
     .more {
@@ -522,10 +439,6 @@ footer {
         grid-template-rows: 1fr;
         align-content: center;
         align-items: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 20px;
-        margin-right: 20px;
     }
 
     .categoria {
@@ -573,15 +486,11 @@ footer {
 /*-------------------FOOTER----------------*/
     .txtfooter {
         color: white;
-        margin-top: 150px;
         text-decoration: none;
     }
 
     .centerimg {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
+        
         width: 50%;
     }
 
@@ -592,7 +501,6 @@ footer {
         background-color: rgb(244, 244, 244);
         justify-items: center;
         align-items: center;
-        margin: 0;
     }
 
     .posizq {
@@ -602,7 +510,6 @@ footer {
         align-items: center;
         font-size: 2.0rem;
         color: rgb(0, 0, 0);
-        margin: 5vh 15vh 3vh 0vh;
     }
 
     .contacto {
@@ -612,7 +519,6 @@ footer {
         background-color: rgb(244, 244, 244);
         justify-items: center;
         align-items: center;
-        margin: 0;
     }
 
     .formularios {
@@ -628,13 +534,6 @@ footer {
         gap: 30px;
     }
 /*----------MARGENES E IMAGENES---------*/
-    .space {
-        margin: 10px;
-    }
-
-    .marginbt {
-        margin-bottom: 50px;
-    }
 
     .redes {
         grid-area: redes;
@@ -642,22 +541,16 @@ footer {
         justify-content: center;
         width: 60px;
         height: 60px;
+        gap: 15px;
     }
 
     .imgchica{
         width: 20%;
     }
-    
-    .marginbottom0{
-        margin-bottom: 0px;
-    }
 
-    .martop10{
-        margin-top: 20px;
-    }
-
-    .marleft50{
-        margin-left: 50%;
+    .txtfooter p{
+        color:white;
+        font-size: 30px;
     }
 
     .imgmedia{
@@ -667,8 +560,6 @@ footer {
     .imgfooter{
         width: 45%;
         height: 50px;
-        margin-top: 30px;
-        margin-left: 60%;
     }
    
 
@@ -678,7 +569,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
     width: 100%;
     max-height: 90%;
     border-radius: 15px;
@@ -824,16 +714,26 @@ footer {
     font-size: 2.0rem;
     color: gray;
     text-decoration: none;
-    margin-left: 87%;
 }
 .close_button:hover{
     color: red;
     font-weight: bold;
 }
 
-.img_back {
-    margin-left: 35px;
+.main-bottom{
+    display: grid;
+    align-items: center;
+    grid-template-rows: 40% 60%;
+    background-color: white;
 }
+
+.botones-main{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
 
 }
 
@@ -888,6 +788,7 @@ footer {
         grid-template-rows: 1fr 1fr 1fr;
         justify-items: center;
         align-items: center;
+        height: 100%;
 
     }
 
@@ -913,7 +814,6 @@ footer {
         color: black;
     }
     form {
-        margin: 0 10% 0 10%;
         font-size: 10px;
         justify-items: center;
         align-items: center;
@@ -931,7 +831,6 @@ footer {
 
     input {
         border-radius: 10px;
-        margin-bottom: 10px;
         width: 100%;
     }
 
@@ -952,9 +851,7 @@ footer {
         background-color: rgb(255, 255, 255);     
     }
 
-    .space {
-        margin: 10px;
-    }
+    
     
     .topnav a {
         color: #000000;
@@ -984,7 +881,6 @@ footer {
         justify-items: center;
         align-items: center;
         font-size: 0.5rem;
-        margin-top: 10px;
         color: white;
         text-decoration: none;
     }
@@ -994,7 +890,6 @@ footer {
         justify-items: center;
         align-items: center;
         font-size: 0.9rem;
-        margin: 0px 25px 15px 25px;
         color: white;
         text-decoration: none;
     }
@@ -1041,17 +936,7 @@ footer {
         color: white;
     }
 
-    .white_p {
-        color: white;
-        text-align: center;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        font-size: 0.9rem;
-        margin-top: 15px;
-        color: white;
-        margin: 0px 25px 0px 25px;
-    }
+    
 
     .noraya {
         text-decoration: none;
@@ -1065,15 +950,7 @@ footer {
         margin-left: 0px;
     }
 
-    .div_padre {
-        background: rgb(244, 244, 244);
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        justify-items: center;
-        width: 100%;
-        height: 100%;
-    }
+
     .maintop {
         display: grid;
         grid-template-columns: 1fr;
@@ -1201,7 +1078,6 @@ footer {
     }
 
     .centerimg {
-        display: block;
         margin-left: 13%;
         margin-right: 10%;
         margin-bottom: 0;
@@ -1219,7 +1095,7 @@ footer {
 
     .txtfooter {
         color: white;
-        margin-top: 150px;
+        
     }
 
     .contacto {
@@ -1229,7 +1105,7 @@ footer {
         background-color: rgb(244, 244, 244);
         justify-items: center;
         align-items: center;
-        margin: 0;
+
     }
 /*------PROPIEDADES DE MARGENES E IMAGENES------*/
     .imgchica{
